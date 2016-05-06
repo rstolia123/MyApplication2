@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <android.support.design.widget.TabLayout
+               android:id="@+id/tab_layout"
+               android:layout_width="match_parent"
+               android:layout_height="37dp"
+               android:layout_below="@+id/toolbar"
+               android:background="?attr/colorPrimary"
+               android:elevation="6dp"
+               android:minHeight="?attr/actionBarSize"
+               android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+                    <TableRow
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:fitsSystemWindows="true"
+                        tools:context="com.example.raghvendrat.radio.MainActivity">
+
+
+                        <RadioGroup
+                            android:id="@+id/Radio_group"
+                            android:layout_width= "match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentLeft="true"
+                            android:background="#6C6671"
+                            android:checkedButton="@+id/twoGhz">
+
+                            <RadioButton
+                                android:id="@+id/BandtwoGhz"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2.4GHz"
+                                android:onClick="onRadioButtonClicked" />
+
+                            <RadioButton
+                                android:id="@+id/BandfiveGhz"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="5GHz"
+                                android:onClick="onRadioButtonClicked"/>
+
+                        </RadioGroup>
+
+
+                    </TableRow>
+
+                    <android.support.v4.view.ViewPager
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tab_layout"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+                            <FrameLayout
+                                xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:tools="http://schemas.android.com/tools"
+                                android:id="@+id/container"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:context="lecho.lib.hellocharts.samples.MainActivity"
+                                tools:ignore="MergeRootFrame" />
+
+     </android.support.design.widget.AppBarLayout>
+
+    <!--<include layout="@layout/content_main" />-->
+</RelativeLayout>

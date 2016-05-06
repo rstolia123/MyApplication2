@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/TabHost03"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ede7f6" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <TabWidget
+            android:id="@+id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <FrameLayout
+                android:id="@+id/tabContent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ListView
+                    android:id="@+id/recoListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:listSelector="@drawable/list_selector"
+
+                    />
+            </FrameLayout>
+        </TabWidget>
+    </LinearLayout>
+
+</TabHost>
+
+
+

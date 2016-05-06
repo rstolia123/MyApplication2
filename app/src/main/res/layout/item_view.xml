@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip"  >
+
+    <TextView
+        android:id="@+id/tvSSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom ="10dip"
+        android:text="SSID"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tvMac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearance"
+        android:text="12:23:34:45"
+        android:layout_below="@+id/tvSSID"
+        android:layout_alignLeft="@+id/tvSSID"
+        android:layout_alignStart="@+id/tvSSID" />
+
+    <TextView
+        android:id="@+id/tvRSSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-54"
+        android:textAppearance="?android:textAppearance"
+        android:layout_below="@+id/rssi_icon"
+        android:layout_alignLeft="@+id/rssi_icon"
+        android:layout_alignStart="@+id/rssi_icon"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+    <TextView
+        android:id="@+id/tvChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel"
+        android:textAppearance="?android:textAppearance"
+        android:layout_alignTop="@+id/tvMac"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+            android:id="@+id/rssi_icon"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:adjustViewBounds="true"
+            android:src="@drawable/a_3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/tvMac" />
+
+</RelativeLayout>

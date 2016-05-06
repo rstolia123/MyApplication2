@@ -1,0 +1,36 @@
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.raghvendrat.myapplication.MainActivity"
+    >
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="3"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="About"/>
+
+    <item
+        android:id="@+id/action_enable"
+        android:actionViewClass="android.widget.Switch"
+        android:title="Wifi enable"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        app:actionLayout="@layout/switch_layout"
+        />
+
+    <item
+        android:id ="@+id/action_refresh"
+        android:layout_width="wrap_content"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_refresh_24dp"
+        android:title="@string/action_refresh"
+        app:showAsAction="always"
+        android:layout_weight="0.04" />
+</menu>
